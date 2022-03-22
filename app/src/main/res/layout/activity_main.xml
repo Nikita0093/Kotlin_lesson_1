@@ -1,31 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/testButton"
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:text="Test Button">
 
     </com.google.android.material.button.MaterialButton>
 
     <TextView
-        android:id="@+id/testTextView"
+        android:id="@+id/testTextViewButton"
         android:layout_width="200sp"
         android:layout_height="150sp"
-        android:layout_gravity="center|top"
+        android:layout_gravity="center"
         android:gravity="center"
         android:hint="Тут будет текст"
         android:textSize="20sp">
 
     </TextView>
 
+    <TextView
+        android:id="@+id/testTextView"
+        android:layout_width="200sp"
+        android:layout_height="150sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="Тут будет текст из data"
+        android:textSize="20sp">
 
-</FrameLayout>
+    </TextView>
+
+
+</LinearLayout>
 

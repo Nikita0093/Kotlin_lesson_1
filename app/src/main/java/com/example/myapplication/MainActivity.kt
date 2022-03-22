@@ -2,8 +2,11 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.WorkSource
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     var position: Boolean = true
@@ -12,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView: TextView = findViewById(R.id.testTextView)
+        val textView: TextView = findViewById(R.id.testTextViewButton)
 
         val button: Button = findViewById(R.id.testButton);
         button.setOnClickListener {
@@ -26,6 +29,17 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        val weather = Weather ("Москва", 10)
+        val textViewWeather: TextView = findViewById(R.id.testTextView)
+        textViewWeather.setText("${weather.townName}" + " + " + "${weather.temperature}")
+
+
+
+
+
     }
 }
+
+
+
 
